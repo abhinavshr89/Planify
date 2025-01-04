@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/ui/button'
+import { Button } from '@/components/ui/button'
 import { ArrowRight, BarChart, Calendar, ChevronRight, Divide, Layout} from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
-import { Card, CardContent } from '@/components/ui/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 
 const features = [
   {
