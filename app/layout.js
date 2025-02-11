@@ -52,3 +52,5 @@ export default function RootLayout({ children }) {
     </ClerkProvider>
   );
 }
+
+// Clerk Provider is used here to wrap here 

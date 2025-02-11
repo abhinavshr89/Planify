@@ -1,15 +1,18 @@
 
 import { getOrganization } from '@/actions/organization';
-
 import React from 'react'
 import OrgSwitcher from '@/components/org-switcher';
 import ProjectList from './_components/project-list';
 
 const Organization = async ({params}) => {
     const{orgId} = params;
+ 
+    
     const organization = await getOrganization(orgId);
-
+    
     if(!organization){
+      
+      
         return <div>Organization not found</div>
     }
     

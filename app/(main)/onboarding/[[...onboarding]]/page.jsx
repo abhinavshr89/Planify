@@ -1,13 +1,9 @@
 "use client"
-import { OrganizationList, useOrganization } from '@clerk/nextjs'
-import { useRouter } from 'next/navigation';
+import { OrganizationList } from '@clerk/nextjs'
 
-import React, { useEffect } from 'react'
 
 const Onboarding = () => {
-  const {organization} = useOrganization();
-  const router = useRouter();
- 
+  
   return (
     <div className='flex justify-center items-center pt-14'>
       <OrganizationList hidePersonal
@@ -19,3 +15,6 @@ const Onboarding = () => {
 }
 
 export default Onboarding
+
+// This page will only hold the OnBoarding Page 
+// 

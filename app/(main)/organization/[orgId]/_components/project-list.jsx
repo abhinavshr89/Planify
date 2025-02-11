@@ -5,6 +5,7 @@ import DeleteProject from "./delete-project";
 
 export default async function ProjectList({ orgId }) {
     const projects = await getProjects(orgId);
+    
     if (projects.length === 0) {
         return (
             <div className="flex items-center justify-center flex-col">

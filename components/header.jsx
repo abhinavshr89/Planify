@@ -8,7 +8,7 @@ import UserMenu from "./user-menu";
 import { checkUser } from "@/lib/checkUser";
 import UserLoading from "./user-loading";
 
-const Header = async() => {
+const Header = async () => {
   await checkUser();
 
   return (
@@ -26,6 +26,7 @@ const Header = async() => {
             </Button>
           </Link>
           <SignedOut>
+            {/* this means the moment someone signs in he will be redirected to the `/onboarding` page  */}
             <SignInButton forceRedirectUrl="/onboarding">
               <Button variant="outline">Login</Button>
             </SignInButton>
@@ -36,7 +37,7 @@ const Header = async() => {
           </SignedIn>
         </div>
       </nav>
-      <UserLoading/>
+      <UserLoading />
     </header>
   );
 };
