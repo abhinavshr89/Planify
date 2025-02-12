@@ -1,9 +1,16 @@
-import { Button } from '@/components/ui/button'
-import { ArrowRight, BarChart, Calendar, ChevronRight, Divide, Layout} from 'lucide-react'
-import Image from 'next/image'
-import React from 'react'
-import Link from 'next/link'
-import { Card, CardContent } from '@/components/ui/card'
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  BarChart,
+  Calendar,
+  ChevronRight,
+  Divide,
+  Layout,
+} from "lucide-react";
+import Image from "next/image";
+import React from "react";
+import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
@@ -28,30 +35,37 @@ const features = [
 
 const LandingPage = () => {
   return (
-    <div className='min-h-screen'>
-      <section className="container mx-auto py-20 text-center">
+    <div className="min-h-screen">
+      <section className="container mx-auto py-20 text-center landing_page_height flex justify-center items-center flex-col">
         <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
           Streamline Your Workflow <br />
-          <span> with <span className="tracking-normal">Planify</span>
+          <span>
+            {" "}
+            with <span className="tracking-normal">Planify</span>
           </span>
         </h1>
         <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
           Empower your team with our intuitive project management solution.
         </p>
-        <p className="text-xl mb-12 max-w-2xl mx-auto"></p>
-        <Link href="/onboarding">
-          <Button size="lg" className="mr-4">
-            Get Started <ChevronRight size={18} className="ml-1" />
-          </Button>
-        </Link>
-        <Link href="#features">
-          <Button size="lg" variant="outline">
-            Learn More
-          </Button>
-        </Link>
+        <p className="text-xl  max-w-2xl mx-auto"></p>
+        <div className="flex gap-3">
+          <Link href="/onboarding">
+            <Button size="lg" className="mr-4">
+              Get Started <ChevronRight size={18} className="ml-1" />
+            </Button>
+          </Link>
+          <Link href="#features">
+            <Button size="lg" variant="outline">
+              Learn More
+            </Button>
+          </Link>
+        </div>
       </section>
 
-      <section id="features" className="bg-gray-900 py-20 px-5">
+      <section
+        id="features"
+        className="bg-gray-900 py-20 px-5 lg:h-screen flex justify-center items-center"
+      >
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold mb-12 text-center">Key Features</h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -73,7 +87,7 @@ const LandingPage = () => {
       {/* cta section */}
 
       {/* CTA Section */}
-      <section className="py-20 text-center px-5">
+      <section className="py-20 text-center px-5  flex justify-center items-center">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold mb-6">
             Ready to Transform Your Workflow?
@@ -89,10 +103,8 @@ const LandingPage = () => {
           </Link>
         </div>
       </section>
-
-      
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

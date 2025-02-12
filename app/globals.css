@@ -81,8 +81,29 @@ body {
   .gradient-title {
     @apply font-extrabold bg-gradient-to-br from-blue-500 via-blue-100 to-blue-400 bg-clip-text tracking-tighter text-transparent pr-2 pb-2;
   }
+  .gradient-dark {
+    @apply bg-gradient-to-b from-[#111827] to-[#1f2937];
+  }
+  
+  .gradient-blue {
+    @apply bg-gradient-to-r from-[#111827] to-[#2563eb];
+  }
+  
+  .gradient-purple {
+    @apply bg-gradient-to-br from-[#111827] to-[#6b21a8];
+  }
+  
+  .gradient-warm {
+    @apply bg-gradient-to-t from-[#111827] to-[#f59e0b];
+  }
+  
+  .gradient-glass {
+    @apply bg-gradient-to-bl from-[#111827] to-[rgba(255,255,255,0.2)];
+  }
 }
 
 
-
+.landing_page_height{
+  height: calc(100vh - 80px);
+}
 
