@@ -20,7 +20,7 @@ const Header = async () => {
 
         <div className="flex items-center gap-4">
           <Link href="/project/create">
-            <Button variant="destructive" className="items-center gap-2 flex">
+            <Button variant="destructive" className="items-center gap-2 flex max-sm:hidden">
               <PenBox size={16} />
               <span>Create Project</span>
             </Button>

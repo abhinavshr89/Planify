@@ -37,25 +37,25 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       <section className="container mx-auto py-20 text-center landing_page_height flex justify-center items-center flex-col">
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
+        <h1 className="text-4xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
           Streamline Your Workflow <br />
           <span>
             {" "}
             with <span className="tracking-normal">Planify</span>
           </span>
         </h1>
-        <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        <p className="sm:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
           Empower your team with our intuitive project management solution.
         </p>
         <p className="text-xl  max-w-2xl mx-auto"></p>
-        <div className="flex gap-3">
+        <div className="flex gap-3 flex-col sm:flex-row justify-center items-center">
           <Link href="/onboarding">
             <Button size="lg" className="mr-4">
               Get Started <ChevronRight size={18} className="ml-1" />
             </Button>
           </Link>
           <Link href="#features">
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="mr-[20px]">
               Learn More
             </Button>
           </Link>
