@@ -152,7 +152,7 @@ export async function createIssue(projectId, data) {
     if (!issue) {
       throw new Error("Issue not found");
     }
-  
+     
     if (
       issue.reporterId !== user.id &&
       !issue.project.adminIds.includes(user.id)
@@ -163,4 +163,5 @@ export async function createIssue(projectId, data) {
     await db.issue.delete({ where: { id: issueId } });
   
     return { success: true };
+      
   }
