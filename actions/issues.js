@@ -165,3 +165,22 @@ export async function createIssue(projectId, data) {
     return { success: true };
       
   }
+
+
+  export async function getUserIssues(userId){
+    const  {orgId } = auth();
+  
+    if (!userId || !orgId) {
+      throw new Error("Unauthorized");
+    }
+  
+    const issues = await db.issue.findMany({
+      where: { assigneeId: userId },
+      include: {
+        project: true,
+        sprint: true,
+      },
+    });
+  
+    return issues;
+  }

@@ -16,5 +16,3 @@ const Onboarding = () => {
 
 export default Onboarding
 
-// This page will only hold the OnBoarding Page 
-// 
