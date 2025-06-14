@@ -17,7 +17,7 @@ import { toast } from "sonner";
 const CreateProjectPage = () => {
   const router = useRouter();
   const { isLoaded: isOrgLoaded, membership } = useOrganization();
-  const { isLoaded: isUserLoaded } = useUser();
+  const { isLoaded: isUserLoaded , ...rest} = useUser();
   const [isAdmin, setIsAdmin] = useState(false);
 
   const {
@@ -32,6 +32,7 @@ const CreateProjectPage = () => {
     if (isOrgLoaded && isUserLoaded && membership) {
       setIsAdmin(membership.role === "org:admin");
     }
+
   }, [isOrgLoaded, isUserLoaded, membership]);
 
   const {

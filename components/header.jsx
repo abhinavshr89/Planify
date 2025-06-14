@@ -9,6 +9,8 @@ import { checkUser } from "@/lib/checkUser";
 import UserLoading from "./user-loading";
 
 const Header = async () => {
+  // we are using the check user here 
+  
   await checkUser();
 
   return (

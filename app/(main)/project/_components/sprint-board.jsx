@@ -16,8 +16,8 @@ import BoardFilters from "./board-filter";
 
 function reorder(list, startIndex, endIndex) {
   const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
+  const [removed] = result.splice(startIndex, 1); // remove the item at startIndex
+  result.splice(endIndex, 0, removed); // insert it at endIndex
 
   return result;
 }
@@ -87,7 +87,7 @@ const SprintBoard = ({ sprints, projectId, orgId }) => {
     }
 
     const newOrderedData = [...issues];
-    // source and destination list
+   
     const sourceList = newOrderedData.filter(
       (list) => list.status === source.droppableId
     );
@@ -127,7 +127,7 @@ const SprintBoard = ({ sprints, projectId, orgId }) => {
     }
 
     const sortedIssues = newOrderedData.sort((a, b) => a.order - b.order);
-    setIssues(newOrderedData, sortedIssues);
+    setIssues(sortedIssues);
     updateIssueOrderFn(sortedIssues);
     
   };
