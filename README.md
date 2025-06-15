@@ -1,10 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Planify - Project Management Tool
 
-## Getting Started
+Planify is a simple and intuitive project management tool designed to help teams and individuals organize, track, and manage their projects efficiently. With features like task tracking, user authentication, and a modern UI, Planify streamlines your workflow and boosts productivity.
 
-First, run the development server:
+## Live Demo
 
-```bash
+[View the live app here](https://project-management-system-pi.vercel.app/)
+
+
 npm run dev
 # or
 yarn dev
